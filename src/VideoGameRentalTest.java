@@ -4,9 +4,9 @@ import junit.framework.TestCase;
 
 
 public class VideoGameRentalTest extends TestCase {	
-	Ps3Game littleBigPlanet;
-    Xbox360Game fable2;
-    WiiGame superSmashBrosBrawl;
+	private Ps3Game littleBigPlanet;
+    private Xbox360Game fable2;
+    private WiiGame superSmashBrosBrawl;
     
     @Before
     public void setUp() {

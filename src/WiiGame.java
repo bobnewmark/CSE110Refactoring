@@ -1,5 +1,5 @@
 
-public class WiiGame {
+public class WiiGame extends VideoGame{
 	private static double CONSOLE_COST = 199.99 ;
 	private static double CONSOLE_RENTAL_COST = 29.99 ;
 	private static double MODIFIER = .75;
@@ -8,7 +8,6 @@ public class WiiGame {
 	private static double EXTRA_PRICE = 1.50;
 	private static int FREQUENT_RENTER_POINTS = 1;
 	private static String CONSOLE_NAME = "Nintendo Wii";
-	
 	private String _gameName;
 		
 	public WiiGame(String name) {
@@ -23,7 +22,7 @@ public class WiiGame {
 	public String get_consoleName() {
 		return CONSOLE_NAME;
 	}
-	
+
 	public double getCharge(int _daysRented, boolean _consoleRented) {
 		double result = 0;
 		result += BASE_PRICE;
@@ -35,11 +34,11 @@ public class WiiGame {
 		}
 		return result;
 	}
-	
+
 	public int getFrequentRenterPoints(int _daysRented, boolean _consoleRented) {
 		if(_consoleRented)
 			return FREQUENT_RENTER_POINTS + _daysRented;
-		else 
+		else
 			return FREQUENT_RENTER_POINTS;
 	}
 
